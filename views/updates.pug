@@ -1,0 +1,26 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+
+        form(action='/update-cobj',method='POST').form-wrapper
+            div(style='margin-bottom: 40px')
+                h3 #{title}
+                a(href='/') Return to the homepage  
+            
+            p(style='color: red') #{error}
+            
+            div
+                label Book Name
+                input(type='text',name='book_name',placeholder='Book Name') 
+            div
+                label Author
+                input(type='text',name='name',placeholder='Book Author') 
+            div
+                label Publisher
+                input(type='text',name='publisher',placeholder='Book Publisher') 
+            div 
+                input(type='submit')
